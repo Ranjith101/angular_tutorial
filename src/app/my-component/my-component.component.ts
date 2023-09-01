@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class MyComponentComponent {
   name = 'Ranjith';
+  color = 'red'
+  GetName(){
+    return this.name
+  }
+
+  getLargestNum(a:Number,b:Number){
+    if(a>b){
+      return a 
+    }else{
+      return b
+    }
+    // return Math.max.apply 
+  }
 }

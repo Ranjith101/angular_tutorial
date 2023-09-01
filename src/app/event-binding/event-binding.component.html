@@ -1,0 +1,14 @@
+<p>event-binding works!</p>
+<p>{{count}}</p>
+<p>{{count1}}</p>
+<button on-click="onClick(); count1 = count">Click</button>
+
+<br>
+<input type="text" (input)="handleInput($event); value1 = $any($event.target).value">
+<p>
+    Input Value->{{value}}
+</p>
+
+<p>
+    without handle input function ->{{value1}}
+</p>
