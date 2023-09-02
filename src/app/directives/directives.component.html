@@ -1,0 +1,44 @@
+<!-- <h1>{{title}}</h1>
+<ul>
+    <li *ngFor="let movie of movies"> -->
+        <!-- Its like map function in js -->
+        <!-- {{movie.Title}} - directed by {{movie.Director}} -released on {{movie.Released}}
+    </li>
+</ul> -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Released date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr  
+                       
+                        [*ngFor="let movie of movies; let i = index ; let o = odd; let e = even;"
+                        
+                        >
+                       -->
+                       <tr *ngFor="let movie of movies; let i = index; let even = even; let odd = odd"
+                       [ngClass]="{'bg-success': even, 'bg-danger': odd}">
+                       <td>{{i+1}}</td>
+                       <td>{{movie.Title}}</td>
+                       <td>{{movie.Director}}</td>
+                       <td>{{movie.Actors}}</td>
+                       <td>{{movie.Released}}</td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

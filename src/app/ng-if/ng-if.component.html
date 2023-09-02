@@ -1,0 +1,26 @@
+<h1>
+    NgIF Example
+</h1>
+<p *ngIf="false">
+    Can you see me?
+</p>
+
+<div class="container">
+    <div class="row">
+        <label for="">Check here</label><input type="checkbox" name="" id="" [(ngModel)]="showme">
+    {{showme}}
+
+    <div *ngIf="showme; then thenBlock ; else elseblock">
+
+    </div>
+    <ng-template #thenBlock>
+        <p>Show me is checked</p>
+    </ng-template>
+
+    <!-- <p *ngIf="!showme">Show me is not checked</p> -->
+    <!-- else part -->
+    <ng-template #elseblock>
+        <p >Show me is not checked</p>
+    </ng-template>
+</div>
+</div>

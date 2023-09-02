@@ -1,0 +1,18 @@
+<!-- att directive -> changes appearance and behaviour of the component, it has [] at first  -->
+<input type="checkbox" [(ngModel)]="enablered">
+<input type="checkbox" [(ngModel)]="big">
+<input type="checkbox" [(ngModel)]="italic">
+
+<div [ngClass]="{
+    'primary':enablered,
+    'big':big,
+    'italics':italic
+}">
+    Sample Text
+</div>
+<br>
+<label for="">Enter Color</label>
+<input type="text" [(ngModel)]="color">
+<div style="font-weight: 600" [ngStyle]="{'backgroundColor':color}">
+    Sample Text
+</div>

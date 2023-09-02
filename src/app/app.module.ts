@@ -7,6 +7,11 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { FormsModule } from '@angular/forms';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { DirSwitchComponent } from './dir-switch/dir-switch.component';
+import { NgIfComponent } from './ng-if/ng-if.component';
+import { AttrDirectiveComponent } from './attr-directive/attr-directive.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +19,11 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     MyComponentComponent,
     PropertyBindingComponent,
     EventBindingComponent,
+    DirectivesComponent,
+    DirSwitchComponent,
+    NgIfComponent,
+    AttrDirectiveComponent,
+    PipesComponent,
     
   ],
   imports: [

@@ -1,0 +1,20 @@
+<label for="">Type Number</label>
+<input type="text" [(ngModel)]="number">
+
+<div [ngSwitch]="number">
+    <div *ngSwitchCase="1"> 
+        One
+    </div>
+    <div *ngSwitchCase="2"> 
+        Two
+    </div>
+    <div *ngSwitchCase="3"> 
+        Three
+    </div>
+    <div *ngSwitchCase="4"> 
+        Four
+    </div>
+    <div *ngSwitchCase="5"> 
+        Five
+    </div>
+</div>
