@@ -12,6 +12,9 @@ import { DirSwitchComponent } from './dir-switch/dir-switch.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { AttrDirectiveComponent } from './attr-directive/attr-directive.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { SharingDataComponent } from './sharing-data/sharing-data.component';
+import { FormComponent } from './form/form.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { PipesComponent } from './pipes/pipes.component';
     NgIfComponent,
     AttrDirectiveComponent,
     PipesComponent,
+    SharingDataComponent,
+    FormComponent,
+    ListComponent,
     
   ],
   imports: [

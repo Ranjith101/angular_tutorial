@@ -1,1 +1,14 @@
-<p>pipes works!</p>
+<h1>unformatted date -{{todate}}</h1>
+<h1>formatted date -{{todate | date}}</h1> <!-- | this is pipe symbol used to slicing / splicing-->
+<h1>formatted date with time -{{todate | date:'medium'}}</h1>
+<h1>short date with time -{{todate | date:'short'}}</h1>
+<h1>long date  -{{todate | date:'longDate'}}</h1>
+<h1>full date  -{{todate | date:'fullDate'}}</h1>
+<p>{{title | uppercase}}</p>
+<!-- Slice pipe -->
+<p>{{ title | slice:10:18 }}</p>
+<p>{{ title | slice:-7 }}</p>
+<p>{{ title | slice:0:7 }}</p>
+
+<!-- currency pipe -->
+<p>A: {{a | currency:'INR'}}</p>

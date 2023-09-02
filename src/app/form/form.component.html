@@ -1,0 +1,8 @@
+<h1>Form Component</h1>
+<form action="">
+    <label for="">Car</label>
+    <input type="text" name="carname" [(ngModel)]="carnames">
+    <button class="btn btn-secondary" (click)="addCar()">Save</button>
+</form>
+<br>
+<app-list [carsInput]="cars"></app-list>

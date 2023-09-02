@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pipes.component.scss']
 })
 export class PipesComponent {
-
+  todate = new Date()
+  title="welcome to angular"
+  a: number = 25000;
 }
