@@ -6,5 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-@Input('carsInput')  cars:any=[] //input moodule is used to pass data from parent to child component
+ cars:any=[] //input moodule is used to pass data from parent to child component
+carData(carsdata:any){
+    this.cars = carsdata;
+}
 }

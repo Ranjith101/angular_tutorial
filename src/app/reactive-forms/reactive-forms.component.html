@@ -1,0 +1,54 @@
+<div class="container">
+    <h3>Reactive Forms</h3>
+<form [formGroup]="contactForm" (submit)="onSubmit()" ngNativeValidate>
+    <p>
+        <label for="">FirstName:</label>
+        <input type="text" id="firstName"  name="firstName" formControlName="firstName" required>
+        
+    </p>
+    <p>
+        <label for="">LastName:</label>
+        <input type="text" id="lastName" name="lastName" formControlName="lastName">
+    </p>
+    <p>
+        <label for="">Email</label>
+        <input type="text" id="email" name="email" formControlName="email">
+    </p>
+    <p>
+        <label for="gender">gender:</label>
+        <input type="radio" name="gender" id="male" value="male" formControlName="gender">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" formControlName="gender">
+        <label for="female">Female</label> <br><br>
+    </p>
+    <p>
+        <label for="country">Country: </label>
+        <select name="country" id="country" formControlName="country">
+            <option>Select an option</option>
+            <option [value]="country.name" *ngFor="let country of countryList">{{country.name}}</option>
+        </select>
+    </p>
+    <p>
+        <input type="checkbox" name="isMarried" id="isMarried" formControlName="isMarried">
+        <label for="isMarried">Is Married?</label>
+    </p>
+    <div formGroupName="address">
+        <p>
+            <label for="">City</label>
+            <input type="text" name="city" formControlName="city">
+        </p>
+        <p>
+            <label for="">Street</label>
+            <input type="text" name="street" formControlName="street">
+        </p>
+        <p>
+            <label for="">Pincode</label>
+            <input type="text" name="pincode" formControlName="pincode">
+        </p>
+    </div>
+    <p>
+        <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success">Submit</button>
+    </p>
+    
+</form>
+</div>

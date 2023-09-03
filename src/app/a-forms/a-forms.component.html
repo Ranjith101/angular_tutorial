@@ -1,0 +1,44 @@
+<h1>Templte driven forms</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+
+            <form #RegForm="ngForm" (submit)="onSubmit(RegForm)">
+                <label for="name">Name:</label>
+                <input type="text" name="name" [(ngModel)]="contact.name"><br><br>
+                <label for="sex">Sex:</label>
+                <input type="radio" name="sex" id="male" value="male" [(ngModel)]="contact.sex">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="female" value="female" [(ngModel)]="contact.sex">
+                <label for="female">Female</label> <br><br>
+                <label for="country">Country: </label>
+                <select name="country" id="country" [(ngModel)]="contact.country">
+                    <option>Select an option</option>
+                    <option [value]="country.name" *ngFor="let country of countryList">{{country.name}}</option>
+                </select><br><br>
+                <label for="message">Message:</label><br>
+                <textarea name="message" id="message" cols="30" rows="4" [(ngModel)]="contact.message"></textarea><br><br>
+                <input type="checkbox" name="newsletter" id="newsletter" [(ngModel)]="contact.newsletter">
+                <label for="newsletter">Subscribe?</label><br><br>
+                <div ngModelGroup="address"> <!--Nested form-->
+                    <p>
+                        <label for="">City</label>
+                        <input type="text" name="city" [(ngModel)]="contact.address.city">
+                    </p>
+                    <p>
+                        <label for="">Street</label>
+                        <input type="text" name="street" [(ngModel)]="contact.address.street">
+                    </p>
+                    <p>
+                        <label for="">Pincode</label>
+                        <input type="text" name="pincode" [(ngModel)]="contact.address.pincode">
+                    </p>
+                </div>
+      
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+</div>

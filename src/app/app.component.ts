@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ranjith_angular_tutorial';
+  titles:any=[]
+  addTitle(){
+    this.titles.push(this.title)
+    this.title=''
+    console.log(this.titles)
+  }
+  disableHeading = false
 }
